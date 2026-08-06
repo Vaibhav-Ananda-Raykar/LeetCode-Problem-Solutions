@@ -5,10 +5,10 @@ class Solution(object):
 
         while left <= right:
             mid = (left + right) // 2
-            if nums[mid] == target:
+            if target == nums[mid]:
                 return mid
-            elif nums[mid] > target:
-                right = mid - 1
-            else:
+            elif target > nums[mid] :
                 left = mid + 1
+            elif target < nums[mid]:
+                right = mid - 1
         return left
